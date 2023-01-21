@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+}
+
+body {
+    text-align: center;
+    font-size: 16px;
+    background: url(background.png) center center no-repeat fixed;
+    background-size: cover;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+h1 {
+    font-family: Akzidenz-Grotesk Pro Bold Ext;
+    font-size: 48px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.3) 100%);
+    display: inline-block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    letter-spacing: 0.15em;
+}
+
+p {
+    font-size: 16px;
+    font-family: Akzidenz-Grotesk Pro Med;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.48) 50%, rgba(255, 255, 255, 0.32) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.center1 {
+    margin: 30% auto;
+    text-align: center
+}
+
+
+.knopka {
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px 20px;
+    padding: 15px 30px;
+    overflow: hidden;
+    border: 2px solid;
+    border-bottom-width: 4px;
+    font-size: 24px;
+    font-family: Akzidenz-Grotesk Pro Med;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.01) 100%);
+    transition: color 0.3s, background 0.5s;
+    opacity: 75%;
+    transform: scale(1); transition: 0.32s;
+}
+.knopka:hover {
+    animation: stripes 2s infinite linear;
+    background: linear-gradient(
+      45deg,
+      rgba(30, 255, 188, 1) 25%,
+      rgba(255, 255, 255, 1) 25%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(30, 255, 188, 1) 50%,
+      rgba(30, 255, 188, 1) 75%,
+      rgba(255, 255, 255, 1) 75%,
+      rgba(255, 255, 255, 1)
+    );
+    background-size: 10px 10px;
+    color: white;
+    opacity: 100%;
+    transform: scale(1.01);
+    transition: 0.32s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 26px;
+    font-family: Akzidenz-Grotesk Pro Med;
+}
+@keyframes stripes {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 0;
+    }
+}
+
+.icons a { margin: 0px 8px; }
+
+.icons a img { opacity: 0.48; transition: 0.72s; }
+
+.icons {
+    margin-top: 15px;
+}
+
+.icons a:hover img { opacity: 0.90; transition: 0.32s;}

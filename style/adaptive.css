@@ -1,0 +1,136 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+
+	header .mnu_top li{
+		margin-right: 20px;
+	}
+
+	header .mnu_top li a{
+		font-size: 16px;
+	}
+
+	header{
+		max-width: 95%;
+	}
+
+	header .logo{
+		max-width: 200px;
+	}
+
+	header .btns .btn_light{
+		font-size: 16px;
+		margin-right: 20px;
+		padding: 5px 38px;
+	}
+
+	header .btns .btn_green{
+		font-size: 16px;
+	}
+
+	#main_banner{
+		padding: 125px 0 145px;
+	}
+
+	#main_banner .inner_banner >h1{
+		font-size: 48px;
+		margin-bottom: 40px;
+	}
+
+	#main_banner .inner_banner >.btn{
+		font-size: 20px;
+	}
+
+	#why_us .row_flex >.why_item >.name{
+		margin: 50px 0 16px;
+		font-size: 26px;
+	}
+
+	#why_us .row_flex >.why_item >.descr{
+		font-size: 16px;
+	}
+
+	#why_us .row_flex >.why_item{
+		width: 27%;
+	}
+
+	#why_us .row_flex{
+		justify-content: space-around;
+	}
+
+	#sale .container_custom >.right_side >.sale_info >.percent{
+		font-size: 80px;
+		margin-right: 30px;
+	}
+
+	#sale .container_custom >.right_side >.sale_info{
+		padding: 14px 22px;
+	}
+
+	#sale .container_custom >.right_side >.sale_info >.text{
+		font-size: 35px;
+	}
+
+	#sale .container_custom >.right_side >.sale_info >.text >img{
+		display: none;
+	}
+
+	#sale .container_custom >.left_side::before, #sale .container_custom >.right_side >.figure{
+		display: none;
+	}
+
+	#stages .btn{
+		font-size: 25px;
+		padding: 10px 50px;
+	}
+
+	footer .mnu_footer .col_mnu_footer >b{
+		margin-bottom: 20px;
+		font-size: 18px;
+	}
+
+	footer .mnu_footer .col_mnu_footer >ul>li{
+		margin-bottom: 10px;
+	}
+
+	footer .mnu_footer .col_mnu_footer >ul>li>a{
+		font-size: 14px;
+	}
+
+	footer .logo_footer{
+		padding-left: 0;
+		margin-top: -46px;
+	}
+
+	footer .logo_footer >p{
+		font-size: 16px;
+	}
+
+	footer .logo_footer >.social_footer >li>a>img{
+		max-width: 40px;
+	}
+
+	footer .logo_footer >.social_footer >li{
+		margin-right: 15px;footer .logo_footer
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /* */
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /* */
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /* */
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /* */
+}
