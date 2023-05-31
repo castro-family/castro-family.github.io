@@ -1,3 +1,10 @@
+var vid = document.querySelector(".background-video");
+var srcv = document.getElementById("sorce");
+srcv.src = "video.mp4";
+vid.volume = 0.09;
+vid.autoplay = true;
+vid.load();
+
 var dont = false
 var userAgent = navigator.userAgent;
 var isPhone = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
@@ -106,11 +113,3 @@ fetch(url)
     .catch(function(error) {
         console.log('Ошибка:', error);
     });
-
-
-var vid = document.querySelector(".background-video");
-var srcv = document.getElementById("sorce");
-srcv.src = "video.mp4";
-vid.volume = 0.09;
-vid.autoplay = true;
-vid.load();
