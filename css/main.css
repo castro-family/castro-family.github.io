@@ -1,0 +1,389 @@
+html {
+  background: #000000;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  cursor: none;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999;
+  animation: fadeOut 2s ease-in-out forwards;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+#loader {
+  border: 16px solid #4c4c4c;
+  border-top: 16px solid #666666;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -60px;
+  filter: blur(7px);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px; /* Ширина вашего бокса */
+  height: 300px; /* Высота вашего бокса */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.box h1 {
+  font-family: Hacked;
+  text-align: center;
+  position: relative;
+  margin: 0%;
+  color: rgba(255, 255, 255, 0.35);
+  top: 10px;
+  font-size: 38px;
+}
+.box p {
+  font-family: Hacked;
+  text-align: center;
+  position: relative;
+  margin: 0%;
+  color: rgba(255, 255, 255, 0.25);
+  top: 24px;
+  font-size: 16px;
+  z-index: 5;
+}
+
+.projects-button {
+  margin: 10px 20px;
+  text-decoration: none;
+  font-family: Hacked;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 0.567);
+  display: inline-block;
+  height: 45px;
+  width: 140px;
+  text-align: center;
+  border: 2px solid #c6c6c616;
+  border-radius: 10px;
+  cursor: none;
+  transition: .3s;
+}
+
+.projects-button:hover {
+  border: 2px solid #c6c6c6;
+  transform: translateY(-2px);
+}
+
+.button-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 10%;
+}
+
+
+.cursor{
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #c6c6c6;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: .1s;
+  z-index: 500;
+}
+
+.cursor2{
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #c6c6c6;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: .17s;
+  z-index: 500;
+}
+
+.button-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 10%;
+}
+
+.icon {
+  text-decoration: none;
+  color: white;
+  opacity: 0.3;
+  padding: 9px;
+  cursor: none;
+}
+
+.icon:hover {
+  border: 2px solid #c6c6c6;
+  padding: 7px;
+  border-radius: 50%;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.modal.show {
+  visibility: visible;
+  z-index: 100;
+  opacity: 1;
+}
+
+.modal .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 0;
+  transition: all 0.2s ease;
+}
+
+.modal-window {
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  background-color: none;
+  z-index: 2;
+  width: 550px;
+  height: 500px;
+  border-radius: 10px;
+  backdrop-filter: blur(7px);
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  padding: 30px;
+}
+
+.mainH1 {
+  position: fixed;
+  left: 40%;
+  font-family: Hacked;
+  text-align: center;
+  color: #ffffff92;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 0%;
+  margin-bottom: 10px;
+}
+
+.list-items {
+  top: 45px;
+  position: relative;
+  overflow-y: auto;
+  width: 100%;
+  height: 93%;
+}
+
+.list-items::-webkit-scrollbar {
+  width: 1px;
+}
+
+.item {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  z-index: 200;
+  position: relative;
+  width: 160px;
+  height: 230px;
+  margin: 8.1px;
+  display: inline-block;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.img-block {
+  width: 160px;
+  height: 90px;
+  left: 0;
+  top: 0;
+  margin: 0;
+}
+
+.item .img-block img {
+  position: absolute;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  z-index: 1;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.4);
+  transition: all 0.7s ease;
+}
+
+.item .img-block img:hover {
+  align-items: center;
+  justify-items: center;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+.item .item-content {
+  overflow: hidden;
+  z-index: 1;
+  position:absolute;
+  bottom: 1px;
+  width: 160px;
+  height: 140px;
+  backdrop-filter: blur(7px);
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+.item .item-content h1 {
+  font-family: Hacked;
+  text-align: center;
+  color: #dededeca;
+  margin: 5px;
+  font-size: 18px;
+}
+.item .item-content p {
+  font-family: Hacked;
+  text-align: center;
+  color: #7c7c7c7f;
+  margin: 5px;
+  font-size: 12px;
+  overflow-wrap: break-word;
+}
+.item .item-content a {
+  margin: 0;
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  text-decoration: none;
+  font-family: Hacked;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 0.567);
+  display: inline-block;
+  height: 40px;
+  width: 115px;
+  text-align: center;
+  border: 2px solid #c6c6c616;
+  border-radius: 10px;
+  cursor: none;
+  transition: .3s;
+}
+
+.item .item-content a:hover {
+  border: 2px solid #c6c6c6;
+}
+
+.no-items {
+  position: relative;
+  top: 40px;
+  text-align: center;
+}
+
+.no-items h1 {
+  color: rgba(255, 255, 255, 0.755);
+  font-family: Hacked;
+}
+
+.modal-window .back {
+  position: absolute;
+  left: 10px;
+}
+
+.modal-window .back a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.3;
+  padding: 9px;
+  cursor: none;
+  padding: 12px;
+  object-position: center;
+}
+
+.modal-window .back a:hover {
+  border: 2px solid #ffffff;
+  padding: 8px 10px;
+  border-radius: 50%;
+}
