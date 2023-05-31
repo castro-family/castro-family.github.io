@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'hacked';
+    src: url('HACKED.ttf');
+    src: local('hacked'), local('hacked'),
+        url('HACKED.ttf') format('truetype');
+}
